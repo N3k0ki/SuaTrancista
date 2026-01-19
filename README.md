@@ -35,14 +35,11 @@ Ideal para profissionais que desejam fortalecer sua marca e atrair novos cliente
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/sua-trancista.git
+   [https://github.com/N3k0ki/SuaTrancista.git]
    ```
 2. Abra o arquivo `index.html` no navegador ou utilize um servidor local.
 
-## 📸 Preview
-
-Adicione aqui imagens do site ou um link de demonstração.
-
 ## 📄 Licença
 
-Projeto de uso livre para fins educacionais e profissionais.
+Projeto de uso **restrito e proprietário**.  
+Não é permitido copiar, modificar, redistribuir ou utilizar este projeto sem autorização prévia da autora.
