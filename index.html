@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua trancista - Ester Ribeiro</title>
+
+    <!-- SEO básico -->
+    <meta name="description"
+        content="Sou Ester Ribeiro, trancista em Sete Lagoas/MG, com 3 anos de experiência na área. Tenho formação em trança base e já participei de encontro de trancistas, sempre buscando evoluir e aperfeiçoar meu trabalho.">
+    <meta name="author" content="Ester Ribeiro">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Cabeçalho-->
+    <header class="header">
+        <div class="logo">
+            <span>Sua Trancista</span>
+        </div>
+
+        <nav class="nav">
+            <a href="#sobre">Sobre</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato" class="btn-contato">Contato</a>
+        </nav>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <!-- Hero PC -->
+    <section class="hero">
+        <div class="hero-text">
+            <span class="subtitle">SUA TRANCISTA</span>
+
+            <h1>
+                SEU <span class="destaque">CABELO</span>, SUA <br>
+                <span class="destaque">FORÇA</span>, SUA <br>
+                <span class="destaque">ASSINATURA</span>.
+            </h1>
+            <a href="https://api.whatsapp.com/send?phone=553198480759&text=Oi%2C%20tudo%20bem%3F%20😊%0AEncontrei%20seu%20trabalho%20e%20gostaria%20de%20saber%20mais%20informações%20sobre%20as%20tranças.%0APoderia%20me%20informar%20os%20modelos%20disponíveis%2C%20valores%20e%20como%20funciona%20o%20agendamento%3F" target="_blank" class="btn-agende">AGENDE SEU HORÁRIO</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="img/Ester.svg" alt="Trancista profissional">
+        </div>
+    </section>
+
+    <!--Hero Mobile-->
+    <section class="card-promo">
+        <div class="content">
+            <p class="subtitle">SUA TRANCISTA</p>
+
+            <h1 class="main-title">
+                SEU <span class="purple-text">CABELO</span>, SUA <br>
+                <span class="purple-text">FORÇA</span>, SUA <br>
+                <span class="purple-text">ASSINATURA.</span>
+            </h1>
+
+            <a href="#" class="btn-agende">AGENDE SEU HORÁRIO</a>
+        </div>
+    </section>
+
+
+
+    <section id="hero">
+        <h2>Sua especialidade em destaque</h2>
+        <p>Frase curta mostrando seu diferencial</p>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2>Sobre mim</h2>
+        <p>Breve apresentação profissional.</p>
+    </section>
+
+    <!-- Portfólio -->
+    <section id="portfolio">
+        <h2>Meus trabalhos</h2>
+
+        <div class="grid">
+            <figure>
+                <img src="img1.jpg" alt="Descrição do trabalho">
+                <figcaption>Nome do trabalho</figcaption>
+            </figure>
+            <!-- repetir -->
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <ul>
+            <li>Serviço 1</li>
+            <li>Serviço 2</li>
+            <li>Serviço 3</li>
+        </ul>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Entre em contato</h2>
+        <p>WhatsApp, Instagram ou formulário</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2026 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+<script>
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+
+
+</script>
+
+</html>
