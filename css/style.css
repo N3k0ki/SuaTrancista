@@ -11,6 +11,7 @@
     --roxo-destaque: #b678ff;
     --roxo-evidente: #9d00ff;
     --branco: #ffffff;
+    --texto: #443e2f;
 }
 
 body {
@@ -273,7 +274,7 @@ body {
     border-radius: 50px;
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 45%;
     font-family: var(--font-realce);
     font-size: 1rem;
     box-shadow: 0 4px 15px rgba(157, 0, 255, 0.4);
@@ -282,15 +283,17 @@ body {
 }
 
 @keyframes scalePulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .btn-agende:active {
@@ -307,7 +310,7 @@ body {
     .card-promo {
         position: relative;
         width: 100%;
-        height: 100vh;
+        height: 85vh;
         /* Ocupa a altura toda da tela do celular */
 
         /* Substitua 'sua-foto.jpg' pelo link da sua imagem */
@@ -351,7 +354,7 @@ body {
         /* Roxo da imagem */
     }
 
-    .btn-agende {
+    .btn-agende-mobile {
         display: inline-block;
         background-color: var(--roxo-evidente);
         color: var(--branco);
@@ -365,8 +368,191 @@ body {
         transition: transform 0.2s;
     }
 
-    .btn-agende:active {
+    .btn-agende-mobile:active {
         transform: scale(0.95);
         /* Efeito de clique no celular */
+    }
+
+    .btn-agende {
+        display: none;
+    }
+}
+
+/*////////// SOBRE /////////////*/
+.container-mobile {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+    gap: 50px;
+}
+
+/* --- Coluna de Texto --- */
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Título */
+h2 {
+    font-family: var(--font-principal);
+    font-size: 4rem;
+    color: var(--roxo-destaque);
+    /* Lilás do título */
+    margin-bottom: 30px;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+/* Parágrafos */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--texto);
+    font-family: var(--font-realce);
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    background-color: var(--roxo-evidente);
+    /* Roxo vibrante */
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    font-family: var(--font-realce);
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(189, 0, 255, 0.3);
+}
+
+.btn:hover {
+    background-color: var(--roxo-destaque);
+    transform: translateY(-2px);
+    /* Leve subida ao passar o mouse */
+}
+
+/* --- Coluna da Imagem --- */
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    /* Opcional: leve arredondamento nos cantos */
+}
+
+/*////////// SOBRE MOBILE /////////////*/
+@media (max-width: 768px) {
+    .container-mobile {
+        display: flex;
+        flex-direction: column;
+        /* Empilha um elemento embaixo do outro */
+        align-items: center;
+        /* Centraliza tudo horizontalmente */
+        max-width: 450px;
+        /* Limite de largura para parecer mobile */
+        width: 100%;
+        margin-top: 20px;
+        padding: 0 30px;
+        /* Adicionado para remover a borda */
+        border: none;
+        /* Adicionado para remover o contorno de clique/foco do navegador */
+        outline: none;
+    }
+
+    /* Estilo do Título */
+    h2 {
+        font-family: var(--font-principal);
+        font-size: 3rem;
+        /* Fonte bem grande */
+        color: var(--roxo-destaque);
+        /* Tom lilás claro da imagem */
+        margin-bottom: 20px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    /* Estilo da Imagem */
+    .image-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+        
+    }
+
+    .image-content img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 4px;
+        /* Leve arredondamento nos cantos, opcional */
+        /* Se não tiver a imagem, isso cria um bloco cinza para visualizar: */
+        min-height: 350px;
+        background-color: var(--branco);
+    }
+
+    /* Estilo do Texto */
+    .text-content {
+        width: 100%;
+        text-align: left;
+        /* Texto alinhado à esquerda para leitura */
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: var(--texto);
+    }
+
+    /* Container do Botão (para centralizar apenas o botão) */
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    /* Estilo do Botão */
+    .btn {
+        background-color: var(--roxo-evidente);
+        /* Roxo vibrante */
+        color: var(--branco);
+        padding: 12px 30px;
+        border-radius: 50px;
+        /* Borda redonda (pílula) */
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        /* Sombra suave */
+        transition: transform 0.2s;
+    }
+
+    .btn:hover {
+        background-color: #9c00d6;
+        transform: scale(1.05);
+    }
+
+    .container{
+        display: none;
     }
 }
