@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -126,62 +127,139 @@
         </div>
 
     </section>
+    <!-- Portifólio Mobile -->
 
-    <!-- Portfólio -->
-    <section id="portfolio">
-        <h2>Meus trabalhos</h2>
-
-        <div class="grid">
-            <figure>
-                <img src="img1.jpg" alt="Descrição do trabalho">
-                <figcaption>Nome do trabalho</figcaption>
-            </figure>
-            <!-- repetir -->
+    <section class="carrossel">
+        <div class="text-profile">
+            <h2>MODELOS DE TRANÇAS</h2>
+            <p class="subtitle-profile">Estilos que valorizam sua identidade</p>
         </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/img/tranças/boho.svg" alt="Trança Boho"></div>
+                <div class="swiper-slide"><img src="/img/tranças/box.svg" alt="Trança Box"></div>
+                <div class="swiper-slide"><img src="/img/tranças/boxeadora.svg" alt="Trança Boxeadora"></div>
+                <div class="swiper-slide"><img src="/img/tranças/braids.svg" alt="Braids"></div>
+                <div class="swiper-slide"><img src="/img/tranças/fulani.svg" alt="Trança Fulani"></div>
+                <div class="swiper-slide"><img src="/img/tranças/ghana.svg" alt="Trança Ghana"></div>
+                <div class="swiper-slide"><img src="/img/tranças/gypys.svg" alt="Trança Gypsy"></div>
+                <div class="swiper-slide"><img src="/img/tranças/masculina.svg" alt="Trança Masculina"></div>
+                <div class="swiper-slide"><img src="/img/tranças/moicano.svg" alt="Trança Moicano"></div>
+                <div class="swiper-slide"><img src="/img/tranças/tiara.svg" alt="Trança Tiara"></div>
+                <div class="swiper-slide"><img src="/img/tranças/topo.svg" alt="Trança Topo"></div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
     </section>
 
-    <!-- Serviços -->
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <ul>
-            <li>Serviço 1</li>
-            <li>Serviço 2</li>
-            <li>Serviço 3</li>
-        </ul>
+
+    <!-- Portifólio PC -->
+
+    <section class="carrossel-pc">
+        <div class="text-profile">
+            <h2>MODELOS DE TRANÇAS</h2>
+            <p class="subtitle-profile">Estilos que valorizam sua identidade</p>
+        </div>
+
+        <div class="swiper mySwiper-pc">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/img/tranças/boho.svg" alt="Boho Braids">
+                    <p class="legenda">Boho Braids</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/box.svg" alt="Box Braids ">
+                    <p class="legenda">Box Braids</p>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/boxeadora.svg" alt="Boxeadora">
+                    <p class="legenda">Boxeadora</p>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/braids.svg" alt="Fulani Braids">
+                    <p class="legenda">Fulani Braids</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/fulani.svg" alt="Fulani lateral">
+                    <p class="legenda">Fulani Lateral</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/ghana.svg" alt="Ghana braids">
+                    <p class="legenda">Ghana braids</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/gypys.svg" alt="Gypsy braids">
+                    <p class="legenda">Gypsy braids</p>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/masculina.svg" alt="Nagô Masculina">
+                    <p class="legenda">Nagô masculina</p>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/moicano.svg" alt="Moicano Braids">
+                    <p class="legenda">Moicano Braids</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/tiara.svg" alt="Nagô tiara">
+                    <p class="legenda">Nagô tiara</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/img/tranças/topo.svg" alt="Nagô Topo">
+                    <p class="legenda">Nagô topo</p>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination-pc"></div>
+        </div>
+
     </section>
 
-    <!-- Contato -->
-    <section id="contato">
-        <h2>Entre em contato</h2>
-        <p>WhatsApp, Instagram ou formulário</p>
-    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>© 2026 Seu Nome. Todos os direitos reservados.</p>
-    </footer>
+    <script>
+        // mobile
+        var swiperMobile = new Swiper(".mySwiper", {
+            direction: "vertical", // Deslizar para cima/baixo
+            loop: true,           // Volta ao início quando termina
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            mousewheel: true,     // Permite usar o scroll do mouse
+        });
 
+        // PC
+        var swiperPC = new Swiper(".mySwiper-pc", {
+            slidesPerView: 3,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination-pc",
+                clickable: true,
+            },
+        });
+    </script>
 </body>
-<script>
-    const header = document.querySelector('.header');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.querySelector('.nav');
-
-    toggle.addEventListener('click', () => {
-        toggle.classList.toggle('active');
-        nav.classList.toggle('active');
-    });
-
-
-</script>
 
 </html>

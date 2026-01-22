@@ -16,6 +16,8 @@
 
 body {
     margin: 0;
+    position: relative;
+    height: 100%;
 }
 
 
@@ -63,7 +65,7 @@ body {
 
 .logo span {
     font-family: var(--font-principal);
-    font-size: 28px;
+    font-size: 30px;
     color: var(--branco);
 }
 
@@ -74,6 +76,11 @@ body {
     color: var(--branco);
     letter-spacing: 1px;
     transition: color 0.3s;
+    margin-left: 40px;
+    font-size: 23px;
+    margin-left: 0;
+    /* Reseta a margem anterior se necessário */
+    text-decoration: none;
 }
 
 
@@ -89,6 +96,12 @@ body {
     background-color: var(--roxo-destaque);
     color: purple;
     /* roxo escuro real */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .nav a:hover {
@@ -223,6 +236,8 @@ body {
     color: #d16cff;
     letter-spacing: 2px;
     font-size: 18px;
+    font-family: var(--font-principal);
+
 
 }
 
@@ -481,7 +496,7 @@ p {
     /* Estilo do Título */
     h2 {
         font-family: var(--font-principal);
-        font-size: 3rem;
+        font-size: 2.6rem;
         /* Fonte bem grande */
         color: var(--roxo-destaque);
         /* Tom lilás claro da imagem */
@@ -496,7 +511,7 @@ p {
         display: flex;
         justify-content: center;
         margin-bottom: 25px;
-        
+
     }
 
     .image-content img {
@@ -552,7 +567,237 @@ p {
         transform: scale(1.05);
     }
 
-    .container{
+    .container {
         display: none;
     }
+}
+
+
+/*//////////////// TRANÇAS ///////////////*/
+
+.carousel-section {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.carousel-section h2 {
+    color: #6a2ca0;
+    letter-spacing: 2px;
+}
+
+.subtitle-profile {
+    color: #b455d4;
+    margin-bottom: 40px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.viewport {
+    overflow: hidden;
+    width: 900px;
+}
+
+.track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    min-width: 280px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.card span {
+    display: block;
+    margin-top: 10px;
+    color: #b455d4;
+}
+
+.prev,
+.next {
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #6a2ca0;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .next,
+    .prev {
+        display: none !important;
+    }
+}
+
+.track {
+    touch-action: pan-y;
+    will-change: transform;
+}
+
+
+.carrossel {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .carrossel-pc {
+        display: none;
+    }
+
+    .carrossel {
+        display: flex;
+        flex-direction: column;
+        /* Alinha os itens (título e swiper) verticalmente */
+        align-items: center;
+        /* Centraliza horizontalmente */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .text-profile {
+        display: block;
+        /* Mudado de inline-block */
+        text-align: center;
+        /* Centraliza o texto dentro da div */
+        width: 100%;
+    }
+
+    .subtitle-profile {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .swiper {
+        width: 70%;
+        height: 40vh;
+        margin: 0 auto;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #444;
+        /* Cor de fundo caso a imagem demore a carregar */
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Faz a imagem preencher o slide sem distorcer */
+    }
+}
+
+/* /////// CARROSSEL PROFILE PC //////////////*/
+.mySwiper-pc {
+    width: 83%;
+    max-width: 1200px;
+    /* Evita que fique gigante em monitores ultra-wide */
+    height: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: hidden;
+}
+
+.swiper-slide-pc {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.swiper-slide-pc img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination-pc {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    /* Ajusta a altura automaticamente */
+    max-height: 80%;
+    /* Garante espaço para o texto embaixo */
+    object-fit: cover;
+    border-radius: 8px
+}
+
+.legenda {
+    margin-top: 10px;
+    color: #a855f7;
+    /* Cor roxa aproximada da sua imagem */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: lowercase;
+    /* Para ficar igual ao seu exemplo */
+    display: flex;
+    justify-content: center;
+}
+
+.carrosel-pc h2 {
+    color: var(--roxo-evidente);
+    letter-spacing: 2px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+.carrosel-pc {
+    display: flex;
+    flex-direction: column;
+    /* Empilha o Título, o Swiper e a Legenda verticalmente */
+    align-items: center;
+    /* Centraliza tudo horizontalmente */
+    justify-content: center;
+    width: 100%;
+    /* Ocupa a largura total para poder centralizar o conteúdo */
+    padding: 20px 0;
+}
+
+.text-profile {
+    width: 100%;
+    /* Ocupa a largura total */
+    display: flex;
+    /* Ativa o flexbox */
+    flex-direction: column;
+    /* Coloca um embaixo do outro */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    text-align: center;
+    /* Garante que o texto em si fique centralizado */
+    margin-bottom: 30px;
+}
+
+.subtitle-profile {
+    color: var(--roxo-destaque);
+    margin-bottom: 40px;
+    font-family: var(--font-realce);
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    display: block;
 }
